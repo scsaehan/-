@@ -45,9 +45,14 @@ const Pricing: React.FC = () => {
              평생 갈 ‘나만의 마케팅팀'을 구축하세요.
           </p>
 
-          <button className="w-full bg-black text-white hover:bg-zinc-800 font-black py-6 rounded-xl text-2xl mb-4 transition-colors uppercase border-2 border-black break-keep">
+          <a 
+            href="https://visionbuilders.kr/shop_view?idx=162" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full bg-black text-white hover:bg-zinc-800 font-black py-6 rounded-xl text-2xl mb-4 transition-colors uppercase border-2 border-black break-keep block"
+          >
              지금 바로 신청하기
-          </button>
+          </a>
         </div>
       </div>
 
@@ -73,7 +78,9 @@ const Pricing: React.FC = () => {
          
          <div>
             <a
-            href="#"
+            href="https://visionbuilders.kr/shop_view?idx=162"
+            target="_blank" 
+            rel="noopener noreferrer"
             className="cta-button inline-block text-2xl sm:text-3xl font-black py-8 px-16 rounded-xl shadow-xl w-full sm:w-auto break-keep"
             >
             지금 신청하기

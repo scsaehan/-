@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Testimonials: React.FC = () => {
+  const defaultProfileImage = "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png";
+
   return (
     <section className="py-24 bg-zinc-900 border-b border-zinc-800">
       <div className="max-w-3xl mx-auto px-6">
@@ -16,12 +18,12 @@ const Testimonials: React.FC = () => {
         {/* KakaoTalk Style Container */}
         <div className="bg-[#bacee0] p-4 sm:p-8 rounded-3xl mx-auto shadow-inner w-full flex flex-col gap-8">
            
-           {/* Review 1: 오다겸 (Ryan) */}
+           {/* Review 1: 오다겸 */}
            <div className="flex flex-col items-start animate-fade-in">
               <div className="flex items-center mb-2 ml-1">
                  <img 
-                    src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/character/X190710165939_11.png" 
-                    alt="Ryan" 
+                    src={defaultProfileImage}
+                    alt="Profile" 
                     className="w-10 h-10 rounded-[14px] object-cover mr-2 shadow-sm bg-white"
                  />
                  <span className="text-sm text-zinc-600 font-bold">오*겸 회원님</span>
@@ -35,12 +37,12 @@ const Testimonials: React.FC = () => {
               </div>
            </div>
 
-           {/* Review 2: 박대근 (Apeach) */}
+           {/* Review 2: 박대근 */}
            <div className="flex flex-col items-start animate-fade-in delay-100">
               <div className="flex items-center mb-2 ml-1">
                  <img 
-                    src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/character/X190710170054_13.png" 
-                    alt="Apeach" 
+                    src={defaultProfileImage}
+                    alt="Profile" 
                     className="w-10 h-10 rounded-[14px] object-cover mr-2 shadow-sm bg-white"
                  />
                  <span className="text-sm text-zinc-600 font-bold">박*근 회원님</span>
@@ -58,12 +60,12 @@ const Testimonials: React.FC = () => {
               </div>
            </div>
 
-           {/* Review 3: 남형석 (Muzi) */}
+           {/* Review 3: 남형석 */}
            <div className="flex flex-col items-start animate-fade-in delay-200">
               <div className="flex items-center mb-2 ml-1">
                  <img 
-                    src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/character/X190710170205_14.png" 
-                    alt="Muzi" 
+                    src={defaultProfileImage}
+                    alt="Profile" 
                     className="w-10 h-10 rounded-[14px] object-cover mr-2 shadow-sm bg-white"
                  />
                  <span className="text-sm text-zinc-600 font-bold">남*석 회원님</span>
@@ -73,12 +75,12 @@ const Testimonials: React.FC = () => {
               </div>
            </div>
 
-           {/* Review 4: 박아빈 (Frodo) */}
+           {/* Review 4: 박아빈 */}
            <div className="flex flex-col items-start animate-fade-in delay-300">
               <div className="flex items-center mb-2 ml-1">
                  <img 
-                    src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/character/X190710170347_16.png" 
-                    alt="Frodo" 
+                    src={defaultProfileImage}
+                    alt="Profile" 
                     className="w-10 h-10 rounded-[14px] object-cover mr-2 shadow-sm bg-white"
                  />
                  <span className="text-sm text-zinc-600 font-bold">박*빈 회원님</span>
@@ -90,12 +92,12 @@ const Testimonials: React.FC = () => {
               </div>
            </div>
 
-           {/* Review 5: 박봉수 (Neo) */}
+           {/* Review 5: 박봉수 */}
            <div className="flex flex-col items-start animate-fade-in delay-300">
               <div className="flex items-center mb-2 ml-1">
                  <img 
-                    src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/character/X190710170438_17.png" 
-                    alt="Neo" 
+                    src={defaultProfileImage}
+                    alt="Profile" 
                     className="w-10 h-10 rounded-[14px] object-cover mr-2 shadow-sm bg-white"
                  />
                  <span className="text-sm text-zinc-600 font-bold">박*수 회원님</span>
