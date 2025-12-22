@@ -30,7 +30,7 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Option 3 (Hero) */}
-        <div className="bg-highlight text-black border-4 border-white p-10 rounded-2xl text-center relative transform shadow-[0_0_30px_rgba(252,211,77,0.3)] z-10 flex flex-col justify-center mt-4">
+        <div id="main-pricing-card" className="bg-highlight text-black border-4 border-white p-10 rounded-2xl text-center relative transform shadow-[0_0_30px_rgba(252,211,77,0.3)] z-10 flex flex-col justify-center mt-4">
            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-red-600 text-white px-8 py-3 rounded-full font-black uppercase tracking-wider shadow-lg text-lg whitespace-nowrap">
             Best Choice
           </div>
@@ -49,7 +49,7 @@ const Pricing: React.FC = () => {
             href="https://visionbuilders.kr/shop_view?idx=162" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-full bg-black text-white hover:bg-zinc-800 font-black py-6 rounded-xl text-2xl mb-4 transition-colors uppercase border-2 border-black break-keep block"
+            className="w-full bg-black text-white hover:bg-zinc-800 font-black py-6 rounded-xl text-2xl mb-4 transition-colors uppercase border-2 border-black break-keep block cursor-pointer"
           >
              지금 바로 신청하기
           </a>
@@ -62,7 +62,7 @@ const Pricing: React.FC = () => {
             <div className="text-zinc-300 text-lg sm:text-xl leading-relaxed space-y-4 break-keep">
                <p>디지털 레버리지 부트캠프는 격월 혹은 분기별 모집 예정입니다.</p>
                <p className="text-red-500 font-black text-2xl decoration-white underline underline-offset-4 decoration-2 break-keep">지금 신청하지 않으시면 최소 2달을 기다리셔야 합니다.</p>
-               <p>모집 마감일은 <strong className="text-white">2025. 1. 5.</strong>입니다.</p>
+               <p>모집 마감일은 <strong className="text-white">2025. 12. 31.</strong>입니다.</p>
                <p className="text-red-400 font-bold bg-red-950/30 inline-block px-2 py-1 rounded break-keep">부트캠프 가격은 수시로 인상될 수 있습니다. 언제나 지금이 가장 저렴합니다.</p>
             </div>
          </div>
@@ -78,9 +78,7 @@ const Pricing: React.FC = () => {
          
          <div>
             <a
-            href="https://visionbuilders.kr/shop_view?idx=162"
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="#main-pricing-card"
             className="cta-button inline-block text-2xl sm:text-3xl font-black py-8 px-16 rounded-xl shadow-xl w-full sm:w-auto break-keep"
             >
             지금 신청하기

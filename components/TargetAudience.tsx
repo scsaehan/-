@@ -24,15 +24,23 @@ const TargetAudience: React.FC = () => {
           <div className="space-y-8">
             <div>
                <span className="bg-zinc-800 text-green-400 px-3 py-1.5 rounded text-sm font-bold uppercase tracking-wide">Group A</span>
-               <p className="text-zinc-300 mt-3 text-lg sm:text-xl leading-relaxed break-keep">
-                 <strong className="text-white">지식 기반:</strong> 세무사, 노무사, 변호사, 학원장, 강사, 상담사, 컨설턴트, 코치 등 지식 기반 상품/서비스를 제공하는 사람
-               </p>
+               <div className="mt-3 text-lg sm:text-xl leading-relaxed break-keep">
+                 <strong className="text-white text-xl block mb-3">지식/크리에이티브 전문가</strong>
+                 <ul className="list-disc list-inside text-zinc-300 space-y-2 pl-1">
+                    <li>세무사, 변호사 등 전문직</li>
+                    <li>강사, 전자책/VOD 강의 판매자, 코치, 학원, 상담사, 컨설턴트 등 지식 판매자</li>
+                    <li>디자인, 영상, 마케팅, 코딩 등 프리랜서/에이전시</li>
+                 </ul>
+               </div>
             </div>
             <div>
                <span className="bg-zinc-800 text-green-400 px-3 py-1.5 rounded text-sm font-bold uppercase tracking-wide">Group B</span>
-               <p className="text-zinc-300 mt-3 text-lg sm:text-xl leading-relaxed break-keep">
-                 <strong className="text-white">기술 기반:</strong> 프리미엄 청소/세차, 인테리어 필름, 도배/타일, 차량 정비 등 개인의 노하우를 판매하는 서비스업 종사자
-               </p>
+               <div className="mt-3 text-lg sm:text-xl leading-relaxed break-keep">
+                 <strong className="text-white text-xl block mb-3">기술 서비스 전문가</strong>
+                 <p className="text-zinc-300">
+                   프리미엄 청소/세차, 인테리어 필름, 도배/타일, 차량 정비 등 개인의 노하우를 판매하는 서비스업 종사자
+                 </p>
+               </div>
             </div>
           </div>
           

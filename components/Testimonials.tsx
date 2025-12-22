@@ -8,10 +8,11 @@ const Testimonials: React.FC = () => {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
            <h2 className="text-lg sm:text-2xl font-medium mb-4 leading-tight text-zinc-400 break-keep">디지털 레버리지 부트캠프는 이번이 최초 런칭입니다.</h2>
-           <p className="text-white text-2xl sm:text-3xl font-black leading-relaxed break-keep">
-             그러나, <span className="text-highlight">부트캠프 교육 내용은 처음이 아닙니다.</span> <br />
-             동일하게 ‘사업자’를 대상으로 진행했던 교육 수강생들의<br />
-             이야기를 그대로 전해드립니다.
+           <p className="text-white text-2xl sm:text-4xl font-black leading-relaxed break-keep">
+             그러나, <span className="text-highlight">부트캠프 교육 내용은 <br className="sm:hidden" /> 처음이 아닙니다.</span> <br />
+             ‘사업자’를 대상으로 진행했던 <br className="sm:hidden" />
+             교육 수강생들의 이야기를 <br className="sm:hidden" />
+             그대로 전해드립니다.
            </p>
         </div>
         

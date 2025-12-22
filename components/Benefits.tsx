@@ -1,117 +1,154 @@
 import React from 'react';
-import { Fingerprint, FolderCheck, Bot, Users } from 'lucide-react';
+import { Fingerprint, FolderCheck, Bot, Users, CheckCircle2, Check } from 'lucide-react';
 
 const Benefits: React.FC = () => {
   return (
     <section className="py-24 bg-zinc-950 border-b border-zinc-900">
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-5xl font-black mb-6 text-white uppercase leading-tight break-keep text-balance">
-            디지털 레버리지 부트캠프에선 <br className="hidden sm:block" />
-            <span className="text-highlight">이런 것들을 얻으실 수 있습니다.</span>
+            부트캠프 종료시 <br className="hidden sm:block" />
+            <span className="text-highlight">다음과 같은 결과물을 얻게 됩니다.</span>
           </h2>
         </div>
 
         <div className="flex flex-col gap-12">
           
-          {/* Benefit 1 */}
-          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-10 rounded-2xl">
-            <div className="flex items-center mb-6">
-              <div className="bg-blue-600 p-4 rounded-xl mr-5 shrink-0">
-                <Fingerprint className="w-8 h-8 text-white" />
+          {/* Benefit 1: 설계도 */}
+          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-3xl relative overflow-hidden group">
+            <div className="flex items-center mb-8">
+              <div className="bg-blue-600 p-3 sm:p-4 rounded-2xl mr-4 sm:mr-6 shrink-0 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+                <Fingerprint className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white break-keep">#1: 퍼스널 브랜딩 청사진 및 SNS 계정 세팅</h3>
+              <h3 className="text-xl xs:text-2xl sm:text-4xl font-black text-white break-keep leading-tight">
+                1. 나만의 브랜딩 & 마케팅 설계도
+              </h3>
             </div>
-            <div className="text-zinc-300 space-y-6 text-lg sm:text-xl leading-relaxed break-keep">
-              <p>
-                <strong className="text-white text-2xl block mb-2">‘내가 누구인가’를 명확히 해야 합니다.</strong>
-                그래야 고객이 이해하고 돈을 낼 수 있습니다.
+            <div className="text-zinc-300 space-y-8 text-lg sm:text-xl leading-relaxed break-keep">
+              <p className="font-bold text-white text-xl sm:text-2xl">
+                고객이 3초 만에 <span className="text-highlight">‘내가 누구인지’</span> 파악하게 됩니다.
               </p>
-              <p>
-                고객 페르소나, 브랜드 스토리, SNS 콘텐츠 홍보 전략, 수익화 로드맵까지 망라하는 
-                브랜딩 청사진을 ‘첫 주’에 함께 완성합니다.
-              </p>
-              <p>
-                그리고, 브랜딩 청사진에 맞게 SNS 계정을 함께 세팅합니다.
-              </p>
-            </div>
-          </div>
-
-          {/* Benefit 2 */}
-          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-10 rounded-2xl">
-            <div className="flex items-center mb-6">
-              <div className="bg-purple-600 p-4 rounded-xl mr-5 shrink-0">
-                <FolderCheck className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white break-keep">#2: 확실한 결과물</h3>
-            </div>
-            <div className="text-zinc-300 space-y-6 text-lg sm:text-xl leading-relaxed break-keep">
-              <p>
-                "잘 배웠다, 앞으로 할 수 있겠다."는 의미 없습니다.<br />
-                <strong className="text-white text-2xl block mb-2 mt-2">"다 했다" 상태로 만들어 드립니다.</strong>
-                4주 뒤 당신의 손에는 다음 결과물이 쥐어져 있습니다.
-              </p>
-              <ul className="list-disc list-inside text-white space-y-3 pl-2 font-medium">
-                <li>랜딩페이지 최소 1개</li>
-                <li>SNS 3종 세트(스레드/블로그/유튜브) 기초 세팅 완료</li>
-                <li>SEO 최적화 콘텐츠 최소 3개(블로그 혹은 유튜브)</li>
-                <li>유튜브 롱폼 영상 최소 1개</li>
-                <li>1일 1개 이상의 스레드 콘텐츠</li>
-              </ul>
-              <p className="italic border-l-4 border-yellow-500 pl-6 py-2 text-zinc-400 bg-zinc-950/50 rounded-r-lg">
-                이 콘텐츠들은 주 7일, 24시간 잠 안자고, 월급도 안 받고 고객을 모아옵니다.
-              </p>
-              <p className="text-base text-zinc-500 mt-2">
-                ※ 주간, 일간 미션을 모두 수행해야 얻어갈 수 있는 결과물입니다.
-              </p>
-            </div>
-          </div>
-
-          {/* Benefit 3 */}
-          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-10 rounded-2xl">
-            <div className="flex items-center mb-6">
-              <div className="bg-green-600 p-4 rounded-xl mr-5 shrink-0">
-                <Bot className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white break-keep">#3: 월 300만 원 아껴주는 디지털 자산</h3>
-            </div>
-            <div className="text-zinc-300 space-y-6 text-lg sm:text-xl leading-relaxed break-keep">
-              <p>
-                SNS 마케팅에 돈 쓰지 마세요.<br />
-                마케터 채용시 발생할 <strong className="text-white border-b-2 border-yellow-500">월 300만 원 이상 비용을 아껴드립니다.</strong>
-              </p>
-              <p>
-                랜딩페이지 제작, 롱폼/숏폼 원고 생성, CRM 메시지 생성 등, 
-                마케터가 해야할 일 다 해주는 AI 프롬프트를 드립니다.
-              </p>
-              <p>
-                ‘콘텐츠 어떻게 만들지?’도 걱정하지 마세요.<br />
-                검증된 콘텐츠 형식에 ‘내 이야기’만 채워넣으면 되는 
-                콘텐츠 템플릿을 제공해드립니다.
-              </p>
-            </div>
-          </div>
-
-          {/* Benefit 4 */}
-          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-10 rounded-2xl">
-            <div className="flex items-center mb-6">
-              <div className="bg-red-600 p-4 rounded-xl mr-5 shrink-0">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white break-keep">#4: 실패가 불가능한 환경</h3>
-            </div>
-            <div className="text-zinc-300 space-y-6 text-lg sm:text-xl leading-relaxed break-keep">
-              <p>
-                의지력을 믿지 마세요.<br />
-                인간은 환경의 지배를 받습니다.<br />
-                우리는 <strong className="text-white text-2xl block mt-2">'할 수밖에 없는 환경’</strong>을 제공합니다.
-              </p>
-              <ul className="list-disc list-inside text-white ml-2">
-                <li>
-                  <strong>6인 1조 소그룹 시스템을 운영합니다.</strong><br />
-                  <span className="text-base sm:text-lg text-zinc-400 pl-6 block mt-2">내가 안 하면 남에게 피해가 가는, 눈치보여서라도 할 수 밖에 없는 환경을 만들어드립니다.</span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0 mt-1" />
+                  <span><strong className="text-white">브랜딩 설계도 완성:</strong> 고객 페르소나, 브랜드 스토리, 수익화 로드맵을 1주 차에 바로 확정합니다.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0 mt-1" />
+                  <span><strong className="text-white">SNS 자동 세팅:</strong> 결정된 컨셉에 맞춰 인스타그램/스레드/유튜브 계정의 '문패(프로필)'를 전문가답게 세팅합니다.</span>
                 </li>
               </ul>
+              <div className="pt-6 border-t border-zinc-800">
+                <p className="text-highlight font-black text-base xs:text-lg sm:text-2xl italic leading-tight">
+                  결과: 잠재 고객이 내 콘텐츠를 ‘놓치면 안 되겠다’ 생각하게 됩니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Benefit 2: 시스템 */}
+          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-3xl relative overflow-hidden group">
+            <div className="flex items-center mb-8">
+              <div className="bg-purple-600 p-3 sm:p-4 rounded-2xl mr-4 sm:mr-6 shrink-0 shadow-[0_0_20px_rgba(147,51,234,0.3)]">
+                <FolderCheck className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-xl xs:text-2xl sm:text-4xl font-black text-white break-keep leading-tight">
+                2. 24시간 일하는 마케팅 시스템
+              </h3>
+            </div>
+            <div className="text-zinc-300 space-y-8 text-lg sm:text-xl leading-relaxed break-keep">
+              <p className="font-bold text-white text-xl sm:text-2xl mb-4 sm:mb-8">
+                만드는 법을 알려드리는 게 아닙니다. <br className="sm:hidden" /> <span className="text-highlight">4주 간 함께 만듭니다.</span>
+              </p>
+              
+              <div className="grid grid-cols-1 gap-3">
+                {[
+                  { text: "잠재 고객이 모이는 '랜딩페이지' 1개" },
+                  { text: "검색을 공략하는 '블로그/유튜브' 콘텐츠 3개" },
+                  { text: "전문가 포스가 느껴지는 '유튜브 롱폼 영상' 1개" },
+                  { text: "조회수를 돈으로 바꾸는 콘텐츠 경로 설계" },
+                  { text: "1일 1개 이상의 스레드 콘텐츠" }
+                ].map((item, i) => (
+                  <div key={i} className="bg-zinc-950/40 p-4 sm:p-5 rounded-2xl border border-zinc-800/50 flex items-center gap-4 group-hover:border-purple-500/30 transition-colors">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 bg-purple-500/20 rounded-full flex items-center justify-center shrink-0 border border-purple-500/30">
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 font-black" />
+                    </div>
+                    <span className="text-zinc-200 font-bold text-lg sm:text-2xl leading-tight">
+                      {item.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-6 border-t border-zinc-800">
+                <p className="text-highlight font-black text-base xs:text-lg sm:text-2xl italic leading-tight">
+                  결과: 요소들이 완성되는 순간 24시간 나를 발견할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Benefit 3: AI 도구 */}
+          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-3xl relative overflow-hidden group">
+            <div className="flex items-center mb-8">
+              <div className="bg-green-600 p-3 sm:p-4 rounded-2xl mr-4 sm:mr-6 shrink-0 shadow-[0_0_20px_rgba(22,163,74,0.3)]">
+                <Bot className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-xl xs:text-2xl sm:text-4xl font-black text-white break-keep leading-tight">
+                3. AI 프롬프트 & 템플릿 (300만 원 가치)
+              </h3>
+            </div>
+            <div className="text-zinc-300 space-y-8 text-lg sm:text-xl leading-relaxed break-keep">
+              <p className="font-bold text-white text-xl sm:text-2xl">
+                마케터 채용 시 발생하는 <span className="text-red-500 underline decoration-red-500 underline-offset-4">월 300만 원</span>을 아껴드립니다.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-1" />
+                  <span><strong className="text-white">복사해서 붙여넣으세요:</strong> 랜딩페이지 문구, 원고, 대응 메시지까지 AI가 써줍니다.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-1" />
+                  <span><strong className="text-white">템플릿 제공:</strong> "오늘 뭐 올리지?" 걱정 끝. 마법의 템플릿을 드립니다.</span>
+                </li>
+              </ul>
+              <div className="pt-6 border-t border-zinc-800">
+                <p className="text-highlight font-black text-base xs:text-lg sm:text-2xl italic leading-tight">
+                  결과: 마케팅 문외한도 AI로 전문 마케터 이상의 글을 쓰게 됩니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Benefit 4: 동료 */}
+          <div className="bg-zinc-900 border border-zinc-800 p-8 sm:p-12 rounded-3xl relative overflow-hidden group">
+            <div className="flex items-center mb-8">
+              <div className="bg-red-600 p-3 sm:p-4 rounded-2xl mr-4 sm:mr-6 shrink-0 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+                <Users className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-xl xs:text-2xl sm:text-4xl font-black text-white break-keep leading-tight">
+                4. 함께 성장하는 동료 커뮤니티
+              </h3>
+            </div>
+            <div className="text-zinc-300 space-y-8 text-lg sm:text-xl leading-relaxed break-keep">
+              <p className="font-bold text-white text-xl sm:text-2xl">
+                멀리 가려면 함께 가야 합니다. <br className="sm:hidden" /> 처음 도전해보는 마케팅의 길을 함께 가는 동료들을 만나게 됩니다.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-red-500 shrink-0 mt-1" />
+                  <span><strong className="text-white">6인 1조 소그룹:</strong> 내가 안 하면 팀원에게 피해가 가는 시스템으로 서로를 끌어줍니다.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-red-500 shrink-0 mt-1" />
+                  <span><strong className="text-white">게임처럼 하는 미션:</strong> 매일 점수가 쌓이고, '북토크 식사 미팅권'이 주어집니다.</span>
+                </li>
+              </ul>
+              <div className="pt-6 border-t border-zinc-800">
+                <p className="text-highlight font-black text-base xs:text-lg sm:text-2xl italic leading-tight">
+                  결과: 혼자 작심삼일 → 함께 작심 10년
+                </p>
+              </div>
             </div>
           </div>
 
