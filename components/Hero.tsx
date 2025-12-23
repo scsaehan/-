@@ -23,10 +23,12 @@ const Hero: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const headlineMoveProgress = Math.min(1, scrollProgress / 0.12);
-  const headlineTop = 50 - (headlineMoveProgress * (window.innerWidth < 640 ? 42 : 40));
-  const headlineScale = 1 - (headlineMoveProgress * 0.1);
-  const headlineOpacity = scrollProgress > 0.4 ? Math.max(0, 1 - (scrollProgress - 0.4) * 10) : 1;
+  // Headline exits much further and FASTER (divisor 0.15 -> 0.1)
+  const headlineMoveProgress = Math.min(1, scrollProgress / 0.1);
+  const headlineTop = 50 - (headlineMoveProgress * 250); // Moves it way off screen (up to -200%)
+  const headlineScale = 1 - (headlineMoveProgress * 0.4);
+  // Fade out significantly earlier (multiplier 8 -> 15) to ensure it's gone before costs appear
+  const headlineOpacity = Math.max(0, 1 - (scrollProgress * 15));
 
   const costActive = scrollProgress >= 0.12 && scrollProgress < 0.48;
   const is300Visible = scrollProgress > 0.18;
@@ -45,7 +47,7 @@ const Hero: React.FC = () => {
     <section ref={containerRef} className="relative h-[600vh] bg-black">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden px-4">
         
-        {/* Stage 0 & 1: Headline */}
+        {/* Stage 0 & 1: Headline - Increased mobile font size */}
         <div 
           className="w-full max-w-6xl text-center z-50 absolute left-0 right-0 mx-auto px-4 will-change-transform"
           style={{ 
@@ -56,7 +58,7 @@ const Hero: React.FC = () => {
             visibility: headlineOpacity <= 0 ? 'hidden' : 'visible'
           }}
         >
-          <h1 className="text-[2.2rem] sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] text-white uppercase break-keep text-balance italic">
+          <h1 className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.2] text-white uppercase break-keep text-balance italic">
             딱 4주, <br className="sm:hidden" />
             <span className="text-highlight">AI 마케팅 부서</span>를 <br />
             완성하세요.
@@ -71,47 +73,47 @@ const Hero: React.FC = () => {
         {/* Action Stage Container */}
         <div className="w-full h-full relative flex items-center justify-center">
           
-          {/* Section 1: The Costs */}
+          {/* Section 1: The Costs - Enforced one-line with whitespace-nowrap and slightly adjusted responsive sizes */}
           <div className={`absolute inset-0 flex items-center justify-center transition-all duration-700
             ${costActive ? 'opacity-100 scale-100' : 'opacity-0 scale-90 blur-xl pointer-events-none'}`}>
-             <div className="relative w-full max-w-4xl px-4 flex flex-col items-center justify-center">
-                <div className="flex flex-col gap-8 sm:gap-16 w-full relative z-10 items-center justify-center">
-                  <p className={`text-[1.5rem] xs:text-[1.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-black text-center transition-all duration-500 break-keep
-                    ${is300Visible ? 'text-white opacity-100 translate-y-0' : 'text-zinc-900 opacity-0 translate-y-4'}`}>
+             <div className="relative w-full max-w-7xl px-4 flex flex-col items-center justify-center">
+                <div className="flex flex-col gap-10 sm:gap-16 w-full relative z-10 items-center justify-center">
+                  <p className={`text-[1.8rem] xs:text-[2.2rem] sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black text-center transition-all duration-500 whitespace-nowrap
+                    ${is300Visible ? 'text-white opacity-100 translate-y-0' : 'text-zinc-900 opacity-0 translate-y-8'}`}>
                     마케터 인건비 월 300만 원
                   </p>
-                  <p className={`text-[1.5rem] xs:text-[1.75rem] sm:text-5xl md:text-6xl lg:text-7xl font-black text-center transition-all duration-500 break-keep
-                    ${is200Visible ? 'text-white opacity-100 translate-y-0' : 'text-zinc-900 opacity-0 translate-y-4'}`}>
+                  <p className={`text-[1.8rem] xs:text-[2.2rem] sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black text-center transition-all duration-500 whitespace-nowrap
+                    ${is200Visible ? 'text-white opacity-100 translate-y-0' : 'text-zinc-900 opacity-0 translate-y-8'}`}>
                     대행사 광고비 월 200만 원
                   </p>
                 </div>
 
-                <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center">
-                  <svg viewBox="0 0 600 240" className="w-full h-full max-w-5xl overflow-visible" preserveAspectRatio="none">
+                <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center overflow-visible">
+                  <svg viewBox="0 0 1000 400" className="w-full h-full max-w-7xl overflow-visible" preserveAspectRatio="none">
                     <path 
-                      d="M 60 50 L 540 190" 
+                      d="M 50 100 L 950 300" 
                       fill="none" 
                       stroke="#EF4444" 
-                      strokeWidth="24" 
+                      strokeWidth="32" 
                       strokeLinecap="round"
                       className="transition-all duration-700 ease-in-out"
                       style={{
-                        strokeDasharray: 1000,
-                        strokeDashoffset: isXTriggered ? 0 : 1000,
-                        filter: 'drop-shadow(0 0 15px rgba(239, 68, 68, 0.6))'
+                        strokeDasharray: 2000,
+                        strokeDashoffset: isXTriggered ? 0 : 2000,
+                        filter: 'drop-shadow(0 0 25px rgba(239, 68, 68, 0.7))'
                       }}
                     />
                     <path 
-                      d="M 540 50 L 60 190" 
+                      d="M 950 100 L 50 300" 
                       fill="none" 
                       stroke="#EF4444" 
-                      strokeWidth="24" 
+                      strokeWidth="32" 
                       strokeLinecap="round"
                       className="transition-all duration-700 ease-in-out delay-150"
                       style={{
-                        strokeDasharray: 1000,
-                        strokeDashoffset: isXTriggered ? 0 : 1000,
-                        filter: 'drop-shadow(0 0 15px rgba(239, 68, 68, 0.6))'
+                        strokeDasharray: 2000,
+                        strokeDashoffset: isXTriggered ? 0 : 2000,
+                        filter: 'drop-shadow(0 0 25px rgba(239, 68, 68, 0.7))'
                       }}
                     />
                   </svg>
